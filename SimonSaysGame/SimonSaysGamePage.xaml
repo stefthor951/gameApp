@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SimonSaysGame" x:Class="SimonSaysGame.SimonSaysGamePage">
+	<ContentPage.Content>
+		<Grid BackgroundColor="Black">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="40"/>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="40"/>
+			</Grid.ColumnDefinitions>
+
+			<Label x:Name="titleLabel" Text="Simon Says" Grid.Row ="0" Grid.ColumnSpan ="4" HorizontalTextAlignment="Center" VerticalTextAlignment="End" FontSize="60" TextColor="White"/>
+			<Label x:Name="gameOverLabel" Text="GAME OVER" Grid.Row="1" Grid.ColumnSpan="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" TextColor="White" FontSize="36" IsVisible="false"/>
+			<Label x:Name="scoreLabel" Text="Final Score:" Grid.Row="1" Grid.ColumnSpan="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontSize="24" IsVisible="false"/>
+			<Button x:Name="playButton" Clicked="playButtonClick" Text="Play/Restart" FontSize="36" Grid.ColumnSpan="4" Grid.Row="4" TextColor="Silver" BackgroundColor="Black"/>
+			<Button x:Name="greenButton" Clicked="greenButtonClick" Grid.Row="2" Grid.Column="1" BackgroundColor="Green" IsEnabled="false"/>
+			<Button x:Name="redButton" Clicked="redButtonClick" Grid.Row="2" Grid.Column="2" BackgroundColor="Maroon" IsEnabled="false"/>
+			<Button x:Name="blueButton" Clicked="blueButtonClick" Grid.Row="3" Grid.Column="1" BackgroundColor="Blue" IsEnabled="false"/>
+			<Button x:Name="yellowButton" Clicked="yellowButtonClick" Grid.Row="3" Grid.Column="2" BackgroundColor="Olive" IsEnabled="false"/>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
